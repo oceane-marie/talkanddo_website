@@ -1,0 +1,30 @@
+<%# navbar rendered %>
+
+<%= link_to teachers_path do %>
+    <button>Find a teacher</button>
+<% end %>
+
+<%= link_to new_teacher_path do %>
+    <button>Become a teacher</button>
+<% end %>
+
+<%= link_to pending_reservations_user_path(@user) do %>
+    <button>Pending reservations</button>
+<% end %>
+
+<%= link_to past_reservations_user_path(@user) do %>
+    <button>Past reservations</button>
+<% end %>
+
+<div class="cards-ctr">
+<% @upcoming_reservations.each do |reservation| %>
+  <div class="card-user">
+    <p>Teacher: <%= reservation.teacher.user.first_name %><%= reservation.teacher.user.last_name %></p>
+    <p>language: <%= reservation.teacher.language %></p>
+    <p>activity: <%= reservation.teacher.activity %></p>
+    <p>When: <%= reservation.date %></p>
+    <p>At: <%= reservation.time %></p>
+    <p>Where: <%= reservation.teacher.location %></p>
+  </div>
+<% end %>
+</div>

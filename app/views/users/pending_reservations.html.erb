@@ -1,0 +1,12 @@
+<div class="cards-ctr">
+<% @pending_reservations.each do |reservation| %>
+  <div class="card-user">
+    <p>Teacher: <%= reservation.teacher.user.first_name %><%= reservation.teacher.user.last_name %></p>
+    <p>language: <%= reservation.teacher.language %></p>
+    <p>activity: <%= reservation.teacher.activity %></p>
+    <p>When: <%= reservation.date %></p>
+    <p>At: <%= reservation.date %></p>
+    <p>Where: <%= reservation.teacher.location %></p>
+  </div>
+<% end %>
+</div>
