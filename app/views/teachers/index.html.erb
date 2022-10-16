@@ -1,6 +1,67 @@
-<nav>
-  <h1>Talk&do</h1>
-</nav>
+<%# navbar rendered %>
 
+<div class="search-bar">
+  <%= form_with url: teachers_path, method: :get do %>
 
-<%= link_to "Return", :root %>
+    <div class="search-section" id="location">
+      <%= text_field_tag :location,
+          params[:location],
+          placeholder: "My city"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+
+  <div class="search-section" id="language">
+    <button data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</button>
+      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+        <%= form_with url: teachers_path, id: "form-language", data: { action: "click->filter#sortbylanguage" }, class:"form", remote: true, method: :get do |f| %>
+          <div class="checkbox">
+            <%= f.label :language, "English", data: { filter_target: 'languagecheckbox' } %>
+            <%= check_box_tag :language, 'English' %>
+          </div>
+          <div class="checkbox">
+            <%= f.label :language, "French", data: { filter_target: 'languagecheckbox' } %>
+            <%= check_box_tag :language, 'French' %>
+          </div>
+          <div class="checkbox">
+            <%= f.label :language, "Korean", data: { filter_target: 'languagecheckbox' } %>
+            <%= check_box_tag :language, 'Korean' %>
+          </div>
+          <div class="checkbox">
+            <%= f.label :language, "Italian", data: { filter_target: 'languagecheckbox' } %>
+            <%= check_box_tag :language, 'Italian' %>
+          </div>
+          <div class="checkbox">
+            <%= f.label :language, "Spanish", data: { filter_target: 'languagecheckbox' } %>
+            <%= check_box_tag :language, 'Spanish' %>
+          </div>
+        <% end %>
+      </div>
+
+  </div>
+
+  <div class="search-section" id="category">
+    <button data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</button>
+      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+        <%= form_with url: teachers_path, id: "form-category", data: { action: "click->filter#sortbycategory" }, class:"form", remote: true, method: :get do |f| %>
+          <div class="checkbox">
+            <%= f.label :category, "Cooking", data: { filter_target: 'categorycheckbox' } %>
+            <%= check_box_tag :category, 'Cooking' %>
+          </div>
+          <div class="checkbox">
+            <%= f.label :category, "Craft", data: { filter_target: 'categorycheckbox' } %>
+            <%= check_box_tag :category, 'Craft' %>
+          </div>
+          <div class="checkbox">
+            <%= f.label :category, "Sport", data: { filter_target: 'categorycheckbox' } %>
+            <%= check_box_tag :category, 'Sport' %>
+          </div>
+        <% end %>
+  </div>
+
+  <div class="search-section" id="search-btn">
+
+  </div>
+
+</div>

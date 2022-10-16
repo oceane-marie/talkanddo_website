@@ -3,11 +3,14 @@ class TeachersController < ApplicationController
   # before_action :authenticate_user!, only: [ :new, :create ]
 
   def index
-    @teachers = Teacher.all
-
+    # @teachers = Teacher.all
     # sort by language
-    if params[:language].present?
+    if params[:location].present?
+      @teachers = Teacher.where('location ILIKE ?', "%#{params[:location]}%")
+    elsif params[:language].present?
       @teachers = Teacher.where('language ILIKE ?', "%#{params[:language]}%")
+    elsif params[:activity].present?
+      @teachers = Teacher.where('activity ILIKE ?', "%#{params[:activity]}%")
     else
       @teachers = Teacher.all
     end
