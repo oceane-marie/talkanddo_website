@@ -11,91 +11,90 @@ User.destroy_all
 Teacher.destroy_all
 Reservation.destroy_all
 
-
 puts 'Creating users...'
-User.create!(
+user_1 = User.create!(
   first_name: "Felicia",
   last_name: "Jefferson",
   email: "fjefferson@random.mail",
   password: "secret",
-  img_url: ""
+  img_url: "https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg"
 )
 
-User.create!(
+user_2 = User.create!(
   first_name: "Deon",
   last_name: "Muir",
   email: "dmuir@random.mail",
   password: "secret",
-  img_url: ""
+  img_url: "https://images.pexels.com/photos/4253312/pexels-photo-4253312.jpeg"
 )
 
-User.create!(
+user_3 = User.create!(
   first_name: "Lucie",
   last_name: "Mcphee",
   email: "lmcphee@random.mail",
   password: "secret",
-  img_url: ""
+  img_url: "https://images.pexels.com/photos/3769999/pexels-photo-3769999.jpeg"
 )
 
-User.create!(
+user_4 = User.create!(
   first_name: "Alistair",
   last_name: "Martin",
   email: "atravis@random.mail",
   password: "secret",
-  img_url: ""
+  img_url: "https://images.pexels.com/photos/4877852/pexels-photo-4877852.jpeg"
 )
 
-User.create!(
+user_5 = User.create!(
   first_name: "Judah",
   last_name: "O'Neill",
   email: "joneill@random.mail",
   password: "secret",
-  img_url: ""
+  img_url: "https://images.pexels.com/photos/1680175/pexels-photo-1680175.jpeg"
 )
 
-User.create!(
+user_6 = User.create!(
   first_name: "Molly",
   last_name: "Carpenter",
   email: "mcarpenter@random.mail",
   password: "secret",
-  img_url: ""
+  img_url: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
 )
 
-User.create!(
+user_7 = User.create!(
   first_name: "Havin",
   last_name: "Trujillo",
   email: "htrujillo@random.mail",
   password: "secret",
-  img_url: ""
+  img_url: "https://images.pexels.com/photos/5302864/pexels-photo-5302864.jpeg"
 )
 
-User.create!(
+user_8 = User.create!(
   first_name: "Herman",
   last_name: "Merritt",
   email: "hmerritt@random.mail",
   password: "secret",
-  img_url: ""
+  img_url: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg"
 )
 
-User.create!(
+user_9 = User.create!(
   first_name: "Enrique",
   last_name: "Sampson",
   email: "msampson@random.mail",
   password: "secret",
-  img_url: ""
+  img_url: "https://images.pexels.com/photos/9120446/pexels-photo-9120446.jpeg"
 )
 
-User.create!(
+user_10 = User.create!(
   first_name: "Ivan",
   last_name: "Choi",
   email: "ichoi@random.mail",
   password: "secret",
-  img_url: ""
+  img_url: "https://images.pexels.com/photos/12303976/pexels-photo-12303976.jpeg"
 )
 
 puts "Creating teachers..."
-Teacher.create!(
-  user_id: 2,
+teacher_1 = Teacher.create!(
+  user: user_2,
   title: "Learn how to make empanadas with me",
   description: "Hi! My name is Deon Muir and I am from Mexico. Join me to learn how to make real empanadas as my abuela taught me. During this activity, we will chat together in Spanish. So put your apron on and cook with me.",
   language: "Spanish",
@@ -103,11 +102,11 @@ Teacher.create!(
   activity: "Cook empanadas",
   location: "London",
   price: 25,
-  duration: 2,
+  duration: 2
 )
 
-Teacher.create!(
-  user_id: 3,
+teacher_2 = Teacher.create!(
+  user: user_3,
   title: "Cook with me a delicious Italian pasta dish like my nonna",
   description: "Hi, I'm Lucy, a professional chef working at an Italian restaurant in Scotland. Half Scottish/ half Italian, I will teach you a typical Roman pasta dish learned during my training in Rome.",
   language: "Italian",
@@ -115,11 +114,11 @@ Teacher.create!(
   activity: "Cook a pasta dish",
   location: "Aberdeen",
   price: 55,
-  duration: 3,
+  duration: 3
 )
 
-Teacher.create!(
-  user_id: 4,
+teacher_3 = Teacher.create!(
+  user: user_4,
   title: "Learn with a French sommelier the secret of French wines",
   description: "Hello, I'm Alistair! A French sommelier working in a wine bar in Bath. I would be happy to share with you the secret of French wines during a taste testing in the beautifully language of Moliere.",
   language: "French",
@@ -127,11 +126,11 @@ Teacher.create!(
   activity: "wine testing",
   location: "Bath",
   price: 65,
-  duration: 2,
+  duration: 2
 )
 
-Teacher.create!(
-  user_id: 6,
+teacher_4 = Teacher.create!(
+  user: user_6,
   title: "Channel your inner Shakespear and discover the beauty of English poetry",
   description: "Hello, my name is Molly. I am a pH student in English literature at Cambridge and I would be delighted to share my passion of English poetry with you. So come and join me during a fun writing session.",
   language: "English",
@@ -139,11 +138,11 @@ Teacher.create!(
   category: "Craft",
   location: "Online",
   price: 45,
-  duration: 2,
+  duration: 2
 )
 
-Teacher.create!(
-  user_id: 7,
+teacher_5 = Teacher.create!(
+  user: user_7,
   title: "Practice yoga with a Colombian certified teacher",
   description: "Hola! My name is Havin. I am a certified yoga teacher from Madellin. Join me to pratice your asanas followed by a deep meditation in Spanish.",
   language: "Spanish",
@@ -151,11 +150,11 @@ Teacher.create!(
   activity: "Yoga",
   location: "London",
   price: 20,
-  duration: 1,
+  duration: 1
 )
 
-Teacher.create!(
-  user_id: 9,
+teacher_6 = Teacher.create!(
+  user: user_9,
   title: "Create a traditional mate gourd with a Argentian profesional woodcarver",
   description: "Buenas! My name is Enrique. I am currently working in Manchester as a woodcarver. Join me to learn how to make your own mate gourd to drink Argentina's national drink.",
   language: "Spanish",
@@ -163,11 +162,11 @@ Teacher.create!(
   activity: "Woodcarving",
   location: "Manchester",
   price: 65,
-  duration: 3,
+  duration: 3
 )
 
-Teacher.create!(
-  user_id: 10,
+teacher_7 = Teacher.create!(
+  user: user_10,
   title: "Create a somptuous bouquet with a master fleurist",
   description: "Hello! I'm Ivan, a Korean fleurist from Jeju Island in South Korea. Join me to learn the traditional Korean art of flower arrangement and learn more about how deeply nature is important for Korean people.",
   language: "Korean",
@@ -175,50 +174,46 @@ Teacher.create!(
   activity: "Flower arrangement",
   location: "London",
   price: 75,
-  duration: 3,
+  duration: 3
 )
 
 puts "Creating reservations..."
 Reservation.create!(
-  user_id: 1,
-  teacher_id: "",
+  user: user_1,
+  teacher: teacher_4,
   date: "2022-12-16",
-  time: "",
+  time: "17:00",
   state: "pending",
-  location: "",
-  price: ,
-  duration: ,
+  price: 45,
+  duration: 2
 )
 
 Reservation.create!(
-  user_id: 1,
-  teacher_id: 2,
+  user: user_1,
+  teacher: teacher_2,
   date: "2022-10-21",
-  time: "",
+  time: "10:00",
   state: "pending",
-  location: "",
-  price: ,
-  duration: ,
+  price: 55,
+  duration: 3
 )
 
 Reservation.create!(
-  user_id: 1,
-  teacher_id: 5,
+  user: user_1,
+  teacher: teacher_5,
   date: "2021-02-02",
-  time: "",
+  time: "11:00",
   state: "accepted",
-  location: "",
-  price: ,
-  duration: ,
+  price: 20,
+  duration: 1
 )
 
 Reservation.create!(
-  user_id: 1,
-  teacher_id: 6,
+  user: user_1,
+  teacher: teacher_6,
   date: "2022-06-21",
-  time: "",
+  time: "14:30",
   state: "accepted",
-  location: "",
-  price: ,
-  duration: ,
+  price: 65,
+  duration: 3
 )

@@ -3,7 +3,7 @@ class Teacher < ApplicationRecord
   has_many :reservations
 
   validates :title, presence: true, length: { in: 5..150 }
-  validates :description, presence: true, length: { in: 150..300 }
+  validates :description, presence: true, length: { in: 50..300 }
   validates :activity, presence: true
   validates :language, presence: true
   validates :location, presence: true
