@@ -10,6 +10,7 @@ export default class extends Controller {
     console.log(this.element)
     console.log(this.languagecheckboxTargets)
     console.log(this.categorycheckboxTargets)
+    console.log(this.listTarget)
   }
 
   sortbylanguage(event) {

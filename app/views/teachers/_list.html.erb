@@ -1,4 +1,4 @@
-<div class="cards-ctr">
+<div class="cards-ctr"  data-filter-target="list">
   <% @teachers.each do |teacher| %>
     <div class="card">
     <%= image_tag teacher.user.img_url, height:250, width: 350%>

@@ -11,6 +11,7 @@
     <% end %>
     </div>
 
+<div data-controller="filter">
   <div class="search-section" id="language">
     <button data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</button>
       <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -57,9 +58,10 @@
             <%= check_box_tag :category, 'Sport' %>
           </div>
         <% end %>
+    </div>
   </div>
-</div>
 
-<div>
-  <%= render 'teachers/list', teachers: @teachers %>
+  <div>
+    <%= render 'teachers/list', teachers: @teachers %>
+  </div>
 </div>
