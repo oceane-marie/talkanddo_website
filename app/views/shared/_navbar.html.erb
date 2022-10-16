@@ -11,18 +11,21 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-      <li>
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle" %>
-        </li>
         <li class="nav-item active">
-          <%= link_to "Profile", "#", class: "nav-link" %>
+          <%= link_to "#", class: "nav-link" do %>
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle" %>
+          <% end %>
         </li>
         <li>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <% end %>
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to new_user_session_path do %>
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          <% end %>
         </li>
       <% end %>
     </ul>
