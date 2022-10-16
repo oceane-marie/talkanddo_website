@@ -17,28 +17,13 @@
       <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
         <%= form_with url: teachers_path, id: "form-language", data: { action: "click->filter#sortbylanguage" }, class:"form", remote: true, method: :get do |f| %>
           <div class="checkbox">
-            <%= f.label :language, "English", data: { filter_target: 'languagecheckbox' } %>
-            <%= check_box_tag :language, 'English' %>
+          <% @single_languages.each do |language| %>
+            <%= f.label :language, language, data: { filter_target: 'languagecheckbox' } %>
+            <%= check_box_tag :language, language %>
+          <% end %>
           </div>
-          <div class="checkbox">
-            <%= f.label :language, "French", data: { filter_target: 'languagecheckbox' } %>
-            <%= check_box_tag :language, 'French' %>
-          </div>
-          <div class="checkbox">
-            <%= f.label :language, "Korean", data: { filter_target: 'languagecheckbox' } %>
-            <%= check_box_tag :language, 'Korean' %>
-          </div>
-          <div class="checkbox">
-            <%= f.label :language, "Italian", data: { filter_target: 'languagecheckbox' } %>
-            <%= check_box_tag :language, 'Italian' %>
-          </div>
-          <div class="checkbox">
-            <%= f.label :language, "Spanish", data: { filter_target: 'languagecheckbox' } %>
-            <%= check_box_tag :language, 'Spanish' %>
-          </div>
-        <% end %>
+         <% end %>
       </div>
-
   </div>
 
   <div class="search-section" id="category">
@@ -46,16 +31,10 @@
       <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
         <%= form_with url: teachers_path, id: "form-category", data: { action: "click->filter#sortbycategory" }, remote: true, method: :get do |f| %>
           <div class="checkbox">
-            <%= f.label :category, "Cooking", data: { filter_target: 'categorycheckbox' } %>
-            <%= check_box_tag :category, 'Cooking' %>
-          </div>
-          <div class="checkbox">
-            <%= f.label :category, "Craft", data: { filter_target: 'categorycheckbox' } %>
-            <%= check_box_tag :category, 'Craft' %>
-          </div>
-          <div class="checkbox">
-            <%= f.label :category, "Sport", data: { filter_target: 'categorycheckbox' } %>
-            <%= check_box_tag :category, 'Sport' %>
+            <% @single_categories.each do |category| %>
+            <%= f.label :language, category, data: { filter_target: 'categorycheckbox' } %>
+            <%= check_box_tag :language, category %>
+          <% end %>
           </div>
         <% end %>
     </div>
