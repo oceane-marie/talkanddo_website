@@ -3,7 +3,13 @@
 <div class="ctr">
   <div class="card-lesson">
     <h2><%= @teacher.title %></h2>
-    <p><%= @teacher.location %></p>
+    <% if @teacher.location == 'Online' %>
+      <div class="online-tag">
+        <p>online</p>
+      </div>
+      <% else %>
+        <p><%= @teacher.location %></p>
+      <% end %>
     <%=image_tag @teacher.user.img_url, height:450, width:450%>
     <h3><%= @teacher.language %></h3>
     <h3><%= @teacher.activity %></h3>
