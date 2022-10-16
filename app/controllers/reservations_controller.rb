@@ -1,5 +1,5 @@
-class reservationsController < ApplicationController
-  before_action :authenticate_user!, only: [ :create ]
+class ReservationsController < ApplicationController
+  before_action :authenticate_user!, only: [:create]
 
   def create
   end
