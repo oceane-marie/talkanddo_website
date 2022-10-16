@@ -1,0 +1,15 @@
+<div class="cards-ctr">
+  <% @teachers.each do |teacher| %>
+    <div class="card">
+    <%= image_tag teacher.user.img_url, height:250, width: 350%>
+    <h2><%= teacher.user.first_name %> <%= teacher.user.last_name %></h2>
+    <h4><%= teacher.location %></h2>
+    <h3><%= teacher.language %></h2>
+    <h3><%= teacher.activity %></h2>
+    <h3><%= teacher.price %>£/ <%= teacher.duration %></h2>
+    <%= link_to teacher_path(teacher) do%>
+      <button>Book</button>
+    <% end %>
+    </div>
+  <% end %>
+</div>
