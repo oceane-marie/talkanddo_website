@@ -2,7 +2,6 @@
 
 <div class="search-bar">
   <%= form_with url: teachers_path, method: :get do %>
-
     <div class="search-section" id="location">
       <%= text_field_tag :location,
           params[:location],
@@ -44,7 +43,7 @@
   <div class="search-section" id="category">
     <button data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</button>
       <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-        <%= form_with url: teachers_path, id: "form-category", data: { action: "click->filter#sortbycategory" }, class:"form", remote: true, method: :get do |f| %>
+        <%= form_with url: teachers_path, id: "form-category", data: { action: "click->filter#sortbycategory" }, remote: true, method: :get do |f| %>
           <div class="checkbox">
             <%= f.label :category, "Cooking", data: { filter_target: 'categorycheckbox' } %>
             <%= check_box_tag :category, 'Cooking' %>
