@@ -218,3 +218,13 @@ Reservation.create!(
   price: 65,
   duration: 3
 )
+
+Reservation.create!(
+  user: user_1,
+  teacher: teacher_4,
+  date: "2023-01-18",
+  time: "09:30",
+  state: "accepted",
+  price: 65,
+  duration: 3
+)

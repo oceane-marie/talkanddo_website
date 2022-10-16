@@ -9,7 +9,7 @@
 <% end %>
 
 <%= link_to pending_reservations_user_path(@user) do %>
-    <button>Pending reservations</button>
+    <button>Pending reservations <%= @past_reservations_count %></button>
 <% end %>
 
 <%= link_to past_reservations_user_path(@user) do %>
@@ -17,13 +17,14 @@
 <% end %>
 
 <div class="cards-ctr">
+<h3>Upcoming lessons</h3>
 <% @upcoming_reservations.each do |reservation| %>
   <div class="card-user">
     <p>Teacher: <%= reservation.teacher.user.first_name %><%= reservation.teacher.user.last_name %></p>
     <p>language: <%= reservation.teacher.language %></p>
     <p>activity: <%= reservation.teacher.activity %></p>
-    <p>When: <%= reservation.date %></p>
-    <p>At: <%= reservation.time %></p>
+    <p>When: <%= reservation.date.strftime('%d/%m/%Y') %></p>
+    <p>At: <%= reservation.time.strftime('%Hh%M') %></p>
     <p>Where: <%= reservation.teacher.location %></p>
   </div>
 <% end %>
