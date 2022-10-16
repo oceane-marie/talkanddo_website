@@ -1,0 +1,22 @@
+<%# navbar rendered %>
+
+<div class="ctr">
+  <div class="card-lesson">
+    <h2><%= @teacher.title %></h2>
+    <p><%= @teacher.location %></p>
+    <%=image_tag @teacher.user.img_url, height:450, width:450%>
+    <h3><%= @teacher.language %></h3>
+    <h3><%= @teacher.activity %></h3>
+    <p><%= @teacher.description %></p>
+  </div>
+  <div class="card-reservation">
+    <%= simple_form_for [@teacher, @reservation] do |f| %>
+      <h2><%= @teacher.price %>£/ <%= @teacher.duration %>h</h2>
+      <%= f.hidden_field :teacher_id, as: :hidden, value: @teacher.id %>
+      <%= f.input :date, as: :date, html5: true %>
+      <%= f.input :time, as: :time, html5: true %>
+      <%= f.button :submit, "Book" %>
+    <% end %>
+  </div>
+
+</div>
