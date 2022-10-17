@@ -78,17 +78,40 @@
   width: 50%;
 }
 
+.description p{
+  line-height: 35px;
+}
+
+.description h4{
+  color: $dark-olive;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 24px;
+}
+
+.description .type-text{
+  padding: 24px 0px;
+}
+
 .card-reservation{
-  background-color: $dark-olive;
+  background-color: $medium-olive;
   width: 35%;
   border-radius: 24px;
   padding: 25px;
   height: fit-content;
   position: sticky;
   top: 0px;
+  box-shadow: 5px 8px 15px 5px $dark-olive;
 }
 
 .description img{
   width: 50%;
   object-fit: cover;
+}
+
+#new_reservation .form-select {
+  background-color: $dark-olive;
+  border: 2px solid $dark-olive;
+  color: $white;
+  fill: $white;
 }

@@ -2,11 +2,13 @@
 
 <div class="ctr lesson-flex">
   <div class="description">
-    <h2><%= @teacher.title %></h2>
-    <h4><%= @teacher.location %></h4>
+      <h2><%= @teacher.title %></h2>
+      <h4><%= @teacher.location %></h4>
     <%=image_tag @teacher.user.img_url%>
-    <h3><%= @teacher.language %></h3>
-    <h3><%= @teacher.activity %></h3>
+    <div class="type-text">
+      <h3><%= @teacher.language %></h3>
+      <h3><%= @teacher.activity %></h3>
+    </div>
     <p><%= @teacher.description %></p>
   </div>
   <div class="card-reservation">
