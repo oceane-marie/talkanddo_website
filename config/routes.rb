@@ -9,9 +9,12 @@ Rails.application.routes.draw do
     member do
       get :past_reservations
     end
-
     member do
       get :pending_reservations
+    end
+    resources :teachers, only: [:create]
+    member do
+      get :as_teacher
     end
   end
 end

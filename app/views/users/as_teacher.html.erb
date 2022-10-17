@@ -1,0 +1,22 @@
+<h1>My lessons as a teacher</h1>
+<%= link_to user_path(@user) do %>
+    <button>Return</button>
+<% end %>
+
+<% if @as_teacher.nil? %>
+  <p>You are not yet a teacher</p>
+  <%= link_to new_teacher_path do %>
+  <button>Become a teacher</button>
+  <% end %>
+<% else %>
+  <% @as_teacher.each do |lesson| %>
+  <h3>Title</h3> <%= lesson.title %>
+  <h3>Description</h3><%= lesson.description %>
+  <h3>Language</h3><%= lesson.language %>
+  <h3>Activity</h3><%= lesson.activity %>
+  <h3>Category</h3><%= lesson.category %>
+  <h3>Price</h3><%= lesson.price %>£
+  <h3>Duration</h3><%= lesson.duration %> /h
+  <h3>Location</h3><%= lesson.location %>
+  <% end %>
+<% end %>

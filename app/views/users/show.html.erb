@@ -16,6 +16,10 @@
     <button>Past reservations</button>
 <% end %>
 
+<%= link_to as_teacher_user_path(@user) do %>
+  <button>My lessons</button>
+<% end %>
+
 <div class="cards-ctr">
 <h3>Upcoming lessons</h3>
 <% @upcoming_reservations.each do |reservation| %>

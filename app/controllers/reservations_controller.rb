@@ -8,12 +8,12 @@ class ReservationsController < ApplicationController
     @reservation.price = @teacher.price
     @reservation.duration = @teacher.duration
     @reservation.state = "pending"
-    @reservation.save!
-    # if @reservation.save
-    #   redirect_to user_path(current_user)
-    # else
-    #   render "teachers/show"
-    # end
+    # @reservation.save!
+    if @reservation.save
+      redirect_to user_path(current_user)
+    else
+      render "teachers/show"
+    end
   end
 
   private

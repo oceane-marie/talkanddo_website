@@ -1,2 +1,20 @@
 <h1>Become a teacher</h1>
 <%= link_to "Return", :root %>
+
+<%= simple_form_for [@user, @teacher] do |f| %>
+  <%= f.hidden_field :user_id, as: :hidden, value: @user %>
+  <%= f.input :title, placeholder: 'Give a nice title to your activity' %>
+  <%= f.input :description, as: :text, placeholder: 'Present yourself to your future students'  %>
+  <%= f.input :language, placeholder: 'French, Italian, Swedish...'  %>
+  <%= f.input :activity, placeholder: 'Yoga, Cooking, Gardening...' %>
+  <%= f.input :category,
+      label: 'Category',
+              as: :select,
+              collection: ["Craft", "Sport", "Cooking", "Exploring", "Culture"]%>
+  <%= f.input :location, placeholder: 'London, Leeds, Manchester...' %>
+  <%= f.input :price %>
+  <%= f.input :duration,
+              as: :select,
+              collection: 1..12 %>
+  <%= f.button :submit %>
+<% end %>

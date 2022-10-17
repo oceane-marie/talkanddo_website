@@ -1,6 +1,6 @@
 class TeachersController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :show ]
-  # before_action :authenticate_user!, only: [ :create ]
+  skip_before_action :authenticate_user!, only: [ :index, :show, :new ]
+  before_action :authenticate_user!, only: [ :create ]
 
   def index
     @teachers = Teacher.all
@@ -29,13 +29,28 @@ class TeachersController < ApplicationController
 
   def show
     @teacher = Teacher.find(params[:id])
-
     @reservation = Reservation.new
   end
 
   def new
+    @teacher = Teacher.new
+    @user = current_user
   end
 
   def create
+    @user = User.find(params[:user_id])
+    @teacher = Teacher.new(teacher_params)
+    @teacher.user = @user
+    if @reservation.save
+      redirect_to user_path(current_user)
+    else
+      render "teachers/new"
+    end
+  end
+
+  private
+
+  def teacher_params
+    params.require(:teacher).permit(:title, :description, :duration, :price, :location, :language, :activity, :category, :user_id)
   end
 end

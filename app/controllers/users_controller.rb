@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     @upcoming_reservations = Reservation.where('date >= ?', DateTime.now).where('state = ?', 'accepted')
     past_reservations = Reservation.where('date < ?', DateTime.now)
     @past_reservations_count = past_reservations.count
+    @teacher = Teacher.where('user_id = ?', current_user)
   end
 
   def past_reservations
@@ -17,4 +18,8 @@ class UsersController < ApplicationController
     @pending_reservations = Reservation.where('state = ?', 'pending')
   end
 
+  def as_teacher
+    @user = current_user
+    @as_teacher = Teacher.where('user_id = ?', current_user)
+  end
 end
