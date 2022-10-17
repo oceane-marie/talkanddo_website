@@ -1,16 +1,10 @@
 <%# navbar rendered %>
 
-<div class="ctr">
-  <div class="card-lesson">
+<div class="ctr lesson-flex">
+  <div class="description">
     <h2><%= @teacher.title %></h2>
-    <% if @teacher.location == 'Online' %>
-      <div class="online-tag">
-        <p>online</p>
-      </div>
-      <% else %>
-        <p><%= @teacher.location %></p>
-      <% end %>
-    <%=image_tag @teacher.user.img_url, height:450, width:450%>
+    <h4><%= @teacher.location %></h4>
+    <%=image_tag @teacher.user.img_url%>
     <h3><%= @teacher.language %></h3>
     <h3><%= @teacher.activity %></h3>
     <p><%= @teacher.description %></p>
@@ -21,7 +15,7 @@
       <%= f.hidden_field :teacher_id, as: :hidden, value: @teacher.id %>
       <%= f.input :date, as: :date, html5: true %>
       <%= f.input :time, as: :time, html5: true %>
-      <%= f.button :submit, "Book" %>
+      <%= f.button :submit, "Book", class:"btn btn-cherry btn-reservation" %>
     <% end %>
   </div>
 

@@ -1,9 +1,12 @@
+// teachers#index
 .card{
   background-color: $dark-olive;
   width: fit-content;
   border-radius: 12px;
   width: 23%;
   margin: 12px 12px;
+  position: relative;
+  border: solid 2px $light-olive;
 }
 
 .cards-ctr{
@@ -24,23 +27,68 @@
 }
 
 .card-text h2{
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .card-text h3{
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .bold-text{
   font-weight: 700;
+  padding-top: 12px;
 }
 
 .card-text h4{
   color: $light-olive;
   font-size: 16px;
-  padding-bottom: 12px;
+}
+
+.pt-12{
+  padding-top: 12px;
 }
 
 .card-text{
-  padding: 12px 24px;
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-bottom: 12px;
+}
+
+.online-tag{
+  background-color: $dark-olive;
+  padding: 0px 9px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  position: absolute;
+  left: 238px;
+  top: 11px;
+  border-radius: 6px;
+  font-variant: all-petite-caps;
+  font-weight: 700;
+}
+
+// teachers#show
+.lesson-flex{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.description{
+  color: black;
+  width: 50%;
+}
+
+.card-reservation{
+  background-color: $dark-olive;
+  width: 35%;
+  border-radius: 24px;
+  padding: 25px;
+  height: fit-content;
+  position: sticky;
+  top: 0px;
+}
+
+.description img{
+  width: 50%;
+  object-fit: cover;
 }
