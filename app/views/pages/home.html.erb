@@ -1,9 +1,27 @@
-<h1>Talk&do</h1>
+<div class="ctr">
 
-<%= link_to teachers_path do %>
-    <button>Find a teacher</button>
-<% end %>
+  <div class="grid-img">
+    <img src="assets/cooking.jpeg" alt="cooking" class="img1">
+    <img src="assets/bike.jpeg" alt="bike" class="img2">
+    <img src="assets/tricot.jpeg" alt="tricot" class="img3">
+    <img src="assets/sport.jpeg" alt="sport" class="img4">
+    <img src="assets/guitar.jpeg" alt="guitar" class="img5">
+  </div>
 
-<%= link_to new_teacher_path do %>
-    <button>Become a teacher</button>
-<% end %>
+  <h1>Talk&do</h1>
+
+  <p>What is teach&do ? <br>
+    A native speaker who teaches their language by doing an activity that you love.<br>
+    Pottery, yoga, cooking... You choose!<br>
+    Share more than a language with talk&do</p>
+
+  <div class="btn-ctr-flex">
+    <%= link_to teachers_path do %>
+      <button class="btn btn-cherry btn-large"><h3>Find a teacher</h3></button>
+    <% end %>
+
+    <%= link_to new_teacher_path do %>
+      <button class="btn btn-cherry btn-large"><h3>Become a teacher</h3></button>
+    <% end %>
+  </div>
+</div>

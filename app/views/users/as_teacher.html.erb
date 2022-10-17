@@ -6,7 +6,7 @@
 <% if @as_teacher.nil? %>
   <p>You are not yet a teacher</p>
   <%= link_to new_teacher_path do %>
-  <button>Become a teacher</button>
+    <button>Become a teacher</button>
   <% end %>
 <% else %>
   <% @as_teacher.each do |lesson| %>

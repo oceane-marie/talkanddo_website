@@ -1,0 +1,32 @@
+.btn-ctr-flex{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn-cherry{
+  background-color: $cherry;
+  color: $white;
+  width: fit-content;
+  border-radius: 12px;
+  box-shadow: 5px 5px 17px 7px #CDCDCD;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $white;
+}
+
+.btn-large{
+  font-size: 24px;
+  padding: 15px 25px;
+}
+
+.btn-cherry:hover{
+  background-color: $dark-olive;
+}
