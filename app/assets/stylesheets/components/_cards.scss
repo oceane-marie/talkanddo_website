@@ -1,4 +1,46 @@
 .card{
   background-color: $dark-olive;
   width: fit-content;
+  border-radius: 12px;
+  width: 23%;
+  margin: 12px 12px;
+}
+
+.cards-ctr{
+  margin-top: 36px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items:flex-start;
+  margin-bottom: 36px;
+}
+
+.card img{
+  width: 100%;
+  border-radius: 12px 12px 0px 0px ;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-text h2{
+  font-size: 24px;
+}
+
+.card-text h3{
+  font-size: 18px;
+}
+
+.bold-text{
+  font-weight: 700;
+}
+
+.card-text h4{
+  color: $light-olive;
+  font-size: 16px;
+  padding-bottom: 12px;
+}
+
+.card-text{
+  padding: 12px 24px;
 }

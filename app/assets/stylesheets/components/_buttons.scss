@@ -34,3 +34,15 @@ a:hover {
 .btn-cherry:hover{
   background-color: $dark-olive;
 }
+
+.btn-card{
+  background-color: $cherry;
+  color: $white;
+  // width: fit-content;
+  border-radius: 12px;
+  box-shadow: 5px 8px 15px 5px $dark-olive;
+  padding: 8px 25%;
+}
+.btn-card:hover{
+  background-color: $light-olive;
+}
