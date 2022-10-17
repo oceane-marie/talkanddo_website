@@ -1,13 +1,13 @@
 <%# navbar rendered %>
 <div class= "ctr" data-controller="filter">
   <div class="search-bar">
-    <div class="search" id="location">
+    <div class="search" id="location-form">
       <%= form_with url: teachers_path, method: :get do %>
         <%= text_field_tag :location,
           params[:location],
           placeholder: "My city"
         %>
-        <%= button_tag :submit, class: "btn btn-cherry btn-search" do %>
+        <%= button_tag :submit, class: "btn btn-cherry btn-search", id:"btn-search" do %>
           <p>Search</p><i class="fa-solid fa-magnifying-glass"></i>
         <% end %>
       <% end %>
