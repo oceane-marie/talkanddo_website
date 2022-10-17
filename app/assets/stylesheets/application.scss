@@ -14,8 +14,18 @@
 
 body{
   font-family: $body-font;
+  background-color: $light-olive;
+  color: $white;
 }
 
 h1{
   font-family: $headers-font;
+}
+
+html{
+  height: 100;
+}
+
+.ctr{
+  height: 100vh;
 }
