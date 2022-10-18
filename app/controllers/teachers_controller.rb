@@ -38,10 +38,10 @@ class TeachersController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
+    @user = current_user
     @teacher = Teacher.new(teacher_params)
     @teacher.user = @user
-    if @reservation.save
+    if @teacher.save
       redirect_to user_path(current_user)
     else
       render "teachers/new"

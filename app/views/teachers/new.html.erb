@@ -1,7 +1,7 @@
 <h1>Become a teacher</h1>
 <%= link_to "Return", :root %>
 
-<%= simple_form_for [@user, @teacher] do |f| %>
+<%= simple_form_for [@teacher] do |f| %>
   <%= f.hidden_field :user_id, as: :hidden, value: @user %>
   <%= f.input :title, placeholder: 'Give a nice title to your activity' %>
   <%= f.input :description, as: :text, placeholder: 'Present yourself to your future students'  %>
