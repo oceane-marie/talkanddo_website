@@ -1,0 +1,50 @@
+// users#show
+.navbar-side{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+}
+
+.ctr-upcoming{
+  width: 70%;
+}
+
+.navbar-side a{
+  width: fit-content;
+  margin-bottom: 12px;
+}
+
+.lesson-side{
+  height: 75vh;
+  width: 60%;
+  background-color: $medium-olive;
+  border-radius: 24px;
+  padding: 36px;
+  display: flex;
+}
+
+.lesson-links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+#btn-pending{
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.tag-pending{
+  position: absolute;
+  border-radius: 50%;
+  padding: 3px 9px;
+  background-color: $cherry;
+  top: 165px;
+  right: 129px;
+}
+
+.mb-12{
+  margin-bottom: 12px;
+}

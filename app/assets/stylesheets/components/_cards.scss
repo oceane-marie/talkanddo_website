@@ -1,7 +1,7 @@
 // teachers#index
 .card{
   background-color: $dark-olive;
-  width: fit-content;
+  // width: fit-content;
   border-radius: 12px;
   width: 23%;
   margin: 12px 12px;
@@ -114,4 +114,44 @@
   border: 2px solid $dark-olive;
   color: $white;
   fill: $white;
+}
+
+.card-user img{
+  width: 30%;
+  border-radius: 12px 0px 0px 12px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-user{
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  background-color: $dark-olive;
+  margin-right: 18px;
+  margin-top: 18px;
+  position: relative;
+}
+
+.tag-upcoming{
+  position: absolute;
+  background-color: #B7BDB0;
+  top: 12px;
+  right: 12px;
+  border-radius: 12px;
+  padding-top: 2px; padding-bottom: 4px;
+  padding-left: 12px; padding-right: 12px;
+  font-variant: all-petite-caps;
+  font-weight: 700;
+}
+
+.lesson-text{
+  width: 70%;
+  padding: 0px 18px;
+  line-height: 25px;
+}
+
+.ctr-upcoming h3{
+  font-size: 20px;
+  font-weight: 700;
 }

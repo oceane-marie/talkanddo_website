@@ -73,3 +73,23 @@ a:hover {
 .btn-reservation:hover{
   background-color: $dark-olive;
 }
+
+// users#show
+.btn-lesson{
+  width: 200px;
+  padding: 10px 17px;
+}
+
+.navbar-side button{
+  width: 400px;
+  padding: 15px 0px;
+}
+
+.navbar-side button:hover{
+  background-color: $medium-olive;
+  border: 2px solid $medium-olive;
+}
+
+.mb-36{
+  margin-bottom: 36px;
+}
