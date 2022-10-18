@@ -7,12 +7,12 @@
     <div class="card">
         <%= image_tag reservation.teacher.user.img_url, height:250, width: 350%>
         <div class="card-text">
-          <p>Teacher: <strong><%= reservation.teacher.user.first_name %><%= reservation.teacher.user.last_name %></strong></p>
-          <p>language: <strong><%= reservation.teacher.language %></strong></p>
-          <p class="mb-12">activity: <strong><%= reservation.teacher.activity %></strong></p>
-          <p>When: <strong><%= reservation.date.strftime('%d/%m/%Y') %></strong></p>
-          <p>At: <strong><%= reservation.time.strftime('%Hh%M') %></strong></p>
-          <p class="mb-12">Where: <strong><%= reservation.teacher.location %></strong></p>
+          <h3>Teacher: <strong><%= reservation.teacher.user.first_name %> <%= reservation.teacher.user.last_name %></strong></h3>
+          <h3>Language: <strong><%= reservation.teacher.language %></strong></h3>
+          <h3 class="mb-12">Activity: <strong><%= reservation.teacher.activity %></strong></h3>
+          <h4>When: <strong><%= reservation.date.strftime('%d/%m/%Y') %></strong></h4>
+          <h4>At: <strong><%= reservation.time.strftime('%Hh%M') %></strong></h4>
+          <h4 class="mb-12">Where: <strong><%= reservation.teacher.location %></strong></h4>
         </div>
     </div>
   <% end %>
