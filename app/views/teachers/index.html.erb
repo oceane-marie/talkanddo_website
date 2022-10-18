@@ -2,7 +2,7 @@
 <div class= "ctr" data-controller="filter">
   <div class="search-bar">
     <div class="search" id="location-form">
-      <%= form_with url: teachers_path, method: :get do %>
+      <%= form_with url: teachers_path, id:"form-location",method: :get do %>
         <%= text_field_tag :location,
           params[:location],
           placeholder: "My city"
@@ -17,10 +17,16 @@
     <div class="search" id="language">
       <button data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><p>Language<i class="fa-solid fa-caret-down"></i></p></button>
         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-          <%= form_with url: teachers_path, id: "form-language", data: { action: "click->filter#sortbylanguage" }, class:"form", remote: true, method: :get do |f| %>
+          <%= form_with url: teachers_path,
+          id: "form-language",
+          data: { action: "click->filter#sortbylanguage" },
+          class:"form", remote: true,
+          method: :get do |f| %>
             <div class="checkbox">
               <% @single_languages.each do |language| %>
-                <%= f.label :language, language, data: { filter_target: 'languagecheckbox' } %>
+                <%= f.label :language,
+                language,
+                data: { filter_target: 'languagecheckbox' } %>
                 <%= check_box_tag :language, language %>
               <% end %>
             </div>
