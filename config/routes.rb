@@ -16,4 +16,5 @@ Rails.application.routes.draw do
       get :as_teacher
     end
   end
+  resources :teachers, only: [:destroy]
 end

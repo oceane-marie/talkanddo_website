@@ -20,6 +20,9 @@
   <p>Price</p><%= teacher.price %>£
   <p>Duration</p><%= teacher.duration %> /h
   <p>Location</p><%= teacher.location %>
+    <%= link_to teacher_path(teacher), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <p><i class="fa-solid fa-xmark"></i>Delete</p>
+    <% end %>
   <% end %>
 <% end %>
 </div>
