@@ -21,5 +21,6 @@ class UsersController < ApplicationController
   def as_teacher
     @user = current_user
     @as_teacher = Teacher.where('user_id = ?', current_user)
+    # @reservations_received = Reservation.all.select { |reservation| reservation.teacher = @as_teacher }
   end
 end
