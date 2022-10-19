@@ -8,3 +8,60 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+// form teacher#new
+// center form middle page
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+// grid to organize form btw img and text
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 75vh;
+  border-radius: 24px;
+  background-color: $dark-olive;
+}
+
+// adapt img inside card
+.img-form{
+  object-fit: cover;
+  object-position: center;
+  border-radius: 24px 0px 0px 24px;
+}
+
+// some padding to breath around form and btw 2 sides
+.form-card{
+  padding: 36px;
+}
+.text-teacher{
+  padding-left: 18px;
+}
+
+// display form on two columns (general description and lesson details)
+.form-flex{
+  display: flex;
+}
+
+// left side of form-card to place btn at the end
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// btn post
+
+.btn-new{
+  width: 100%;
+  padding: 7px 0px;
+}
+
+.btn-new:hover{
+  background-color: $medium-olive;
+}
