@@ -1,32 +1,33 @@
 <div class="center">
   <div class="ctr-flex grid">
-    <img src="https://images.pexels.com/photos/4349855/pexels-photo-4349855.jpeg" alt="teacher" class="img-form">
-    <div class="form-card">
-      <h2>Become a teacher</h2>
-      <%= simple_form_for [@teacher] do |f| %>
-      <div class="form-flex">
-        <div class="text-presentation">
-          <p><%= f.hidden_field :user_id, as: :hidden, value: @user %></p>
-          <p><%= f.input :title, placeholder: 'Give yourself a nice title' %></p>
-          <p><%= f.input :category,
+      <img src="https://images.pexels.com/photos/4349855/pexels-photo-4349855.jpeg" alt="teacher" class="img-form">
+      <div class="form-card">
+        <h2>Become a teacher</h2>
+        <%= simple_form_for [@teacher] do |f| %>
+        <div class="form-flex">
+          <div class="text-presentation">
+            <p><%= f.hidden_field :user_id, as: :hidden, value: @user %></p>
+            <p><%= f.input :title, placeholder: 'Give yourself a nice title' %></p>
+            <p><%= f.input :category,
                           label: 'Category',
                           as: :select,
                           collection: ["Craft", "Sport", "Cooking", "Exploring", "Culture"]%></p>
-          <p><%= f.input :price, placeholder: "22£, 40£..." %></p>
-          <p><%= f.input :description, as: :text, placeholder: 'Present yourself to your future students'  %></p>
-        </div>
-        <div class="text-teacher">
-          <p><%= f.input :language, placeholder: 'French, Arabic...'  %></p>
-          <p><%= f.input :activity, placeholder: 'Yoga, Cooking...' %></p>
-          <p><%= f.input :duration,
+            <p><%= f.input :price, placeholder: "22£, 40£..." %></p>
+            <p><%= f.input :description, as: :text, placeholder: 'Present yourself to your future students'  %></p>
+          </div>
+          <div class="text-teacher">
+            <p><%= f.input :language, placeholder: 'French, Arabic...'  %></p>
+            <p><%= f.input :activity, placeholder: 'Yoga, Cooking...' %></p>
+            <p><%= f.input :duration,
                           as: :select,
                           collection: 1..12,
                           prompt: "1h, 2h..." %></p>
-          <p><%= f.input :location, placeholder: 'London, Manchester...' %></p>
+            <p><%= f.input :location, placeholder: 'London, Manchester...' %></p>
+          </div>
         </div>
+          <%= f.button :submit, "Post", class:"btn btn-cherry btn-new"%>
+        <% end %>
       </div>
-        <%= f.button :submit, "Post", class:"btn btn-cherry btn-new" %>
-      <% end %>
     </div>
   </div>
 </div>
