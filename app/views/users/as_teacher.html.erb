@@ -1,5 +1,4 @@
 <div class="ctr">
-<h2>My teacher's posts</h2>
 <% if @as_teacher.nil? %>
   <p>You are not yet a teacher</p>
   <%= link_to new_teacher_path do %>
@@ -11,13 +10,13 @@
     <div class="card">
       <%= image_tag teacher.user.img_url, height:250, width: 350%>
       <div class="card-text">
-        <h3>Title: <%= teacher.title %></h3>
-        <h3>Language: <%= teacher.language %></h3>
-        <h3>Activity: <%= teacher.activity %></h3>
-        <h3>Category: <%= teacher.category %></h3>
-        <h4>Price: <%= teacher.price %>£</h4>
-        <h4>Duration: <%= teacher.duration %> /h</h4>
-        <h4>Location: <%= teacher.location %></h4>
+        <h3>Title: <strong><%= teacher.title %></strong></h3>
+        <h3>Language: <strong><%= teacher.language %></strong></h3>
+        <h3>Activity: <strong><%= teacher.activity %></strong></h3>
+        <h3 class="mb-12">Category: <strong><%= teacher.category %></strong></h3>
+        <h4>Price: <strong><%= teacher.price %></strong>£</h4>
+        <h4>Duration: <strong><%= teacher.duration %></strong> /h</h4>
+        <h4>Location: <strong><%= teacher.location %></strong></h4>
       </div>
       <div class="tag-delete">
         <%= link_to teacher_path(teacher), method: :delete, data: { confirm: "Are you sure?" } do %>
