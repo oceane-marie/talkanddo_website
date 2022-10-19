@@ -1,28 +1,31 @@
 <div class="ctr">
-<h1>My lessons as a teacher</h1>
-<%= link_to user_path(@user) do %>
-    <button>Return</button>
-<% end %>
-
-
+<h2>My teacher's posts</h2>
 <% if @as_teacher.nil? %>
   <p>You are not yet a teacher</p>
   <%= link_to new_teacher_path do %>
     <button>Become a teacher</button>
   <% end %>
 <% else %>
-  <% @as_teacher.each do |teacher| %>
-  <p>Title</p> <%= teacher.title %>
-  <p>Description</p><%= teacher.description %>
-  <p>Language</p><%= teacher.language %>
-  <p>Activity</p><%= teacher.activity %>
-  <p>Category</p><%= teacher.category %>
-  <p>Price</p><%= teacher.price %>£
-  <p>Duration</p><%= teacher.duration %> /h
-  <p>Location</p><%= teacher.location %>
-    <%= link_to teacher_path(teacher), method: :delete, data: { confirm: "Are you sure?" } do %>
-      <p><i class="fa-solid fa-xmark"></i>Delete</p>
+  <div class="cards-ctr">
+    <% @as_teacher.each do |teacher| %>
+    <div class="card">
+      <%= image_tag teacher.user.img_url, height:250, width: 350%>
+      <div class="card-text">
+        <h3>Title: <%= teacher.title %></h3>
+        <h3>Language: <%= teacher.language %></h3>
+        <h3>Activity: <%= teacher.activity %></h3>
+        <h3>Category: <%= teacher.category %></h3>
+        <h4>Price: <%= teacher.price %>£</h4>
+        <h4>Duration: <%= teacher.duration %> /h</h4>
+        <h4>Location: <%= teacher.location %></h4>
+      </div>
+      <div class="tag-delete">
+        <%= link_to teacher_path(teacher), method: :delete, data: { confirm: "Are you sure?" } do %>
+          <p>Delete</p>
+        <% end %>
+      </div>
+    </div>
     <% end %>
-  <% end %>
+  </div>
 <% end %>
 </div>
