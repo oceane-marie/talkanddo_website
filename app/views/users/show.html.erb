@@ -27,7 +27,7 @@
           <p>When: <%= reservation.date.strftime('%d/%m/%Y') %></p>
           <p>At: <%= reservation.time.strftime('%Hh%M') %></p>
           <p>Where: <%= reservation.teacher.location %></p>
-          <p class="tag-upcoming"><%= reservation.state%></p>
+          <p class="tag-state"><%= reservation.state%></p>
         </div>
       </div>
     <% end %>

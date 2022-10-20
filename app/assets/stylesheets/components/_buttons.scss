@@ -37,7 +37,9 @@ a:hover {
 
 .btn-large:hover{
   background-color: $dark-olive;
+  border: 2px solid $dark-olive;
 }
+
 
 // teachers#index => search_bar
 .btn-search{

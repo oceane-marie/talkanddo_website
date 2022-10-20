@@ -13,6 +13,7 @@
           <h4>When: <strong><%= reservation.date.strftime('%d/%m/%Y') %></strong></h4>
           <h4>At: <strong><%= reservation.time.strftime('%Hh%M') %></strong></h4>
           <h4 class="mb-12">Where: <strong><%= reservation.teacher.location %></strong></h4>
+          <p class="tag-state"><%= reservation.state%></p>
         </div>
     </div>
   <% end %>
