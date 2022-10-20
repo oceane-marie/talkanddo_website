@@ -10,7 +10,7 @@ class ReservationsController < ApplicationController
     @reservation.state = "pending"
     # @reservation.save!
     if @reservation.save
-      redirect_to user_path(current_user)
+      redirect_to pending_reservations_user_path(current_user)
     else
       render "teachers/show"
     end
